@@ -40,11 +40,70 @@
 #         print (nothing)
 #     except :
 #          break
-import pickle,urllib.request
-fp=urllib.request.urlopen("http://www.pythonchallenge.com/pc/def/banner.p")
-data=pickle.load(fp)
-fp.close
-# print(data)
-for i in data:
-    print( "".join([e[1]*e[0] for e in i]))
+# import pickle,urllib.request
+# fp=urllib.request.urlopen("http://www.pythonchallenge.com/pc/def/banner.p")
+# result=pickle.load(fp)
+# fp.close()
+# line=''
+# for n in result:
+#   line=''
+#   for m in n:
+#       line+= m[0]*m[1]
+#   print (line)
+# import urllib.request, zipfile, re, collections
+# o, n, f = [], "90052", "%s.txt"
+# nnr = re.compile(r'Next nothing is (\d+)')
+
+# file = zipfile.ZipFile("channel.zip")
+# while True:
+#     try:
+#         btemp=file.read(f % n)
+#         strtemp=btemp.decode("utf8")  
+#         n = nnr.search(strtemp).group(1)
+#     except:
+#         print (file.read(f % n))
+#         break
+#     print(n)
+#     o.append(file.getinfo(f % n).comment.decode('utf8'))
+# print (''.join(o))
+# import re, image
+
+# i = Image.open("oxygen.png") # http://www.pythonchallenge.com/pc/def/oxygen.png
+# row = [i.getpixel((x, 45)) for x in range(0, i.size[0], 7)]
+# ords = [r for r, g, b, a in row if r == g == b]
+
+# print ("".join(map(chr, map(int, re.findall("\d+", "".join(map(chr, ords)))))))
+# import time
+# import pickle
+# entry = {}          
+# entry['title'] = 'Dive into history, 2009 edition'
+# entry['article_link'] = 'http://diveintomark.org/archives/2009/03/27/dive-into-history-2009-edition'
+# entry['comments_link'] = None
+# entry['internal_id'] = b'\xDE\xD5\xB4\xF8'
+# entry['tags'] = ('diveintopython', 'docbook', 'html')
+# entry['published'] = True
+
+# entry['published_date'] = time.strptime('Fri Mar 27 22:20:42 2009') 
+
+
+# with open('entry.pickle','wb') as f:
+#     pickle.dump(entry,f)
+# import pickle
+# with open('entry.pickle', 'rb') as f:  
+#     entry = pickle.load(f)              
+# entry                                   
+# # {'comments_link': None,
+# #  'internal_id': b'\xDE\xD5\xB4\xF8',
+# #  'title': 'Dive into history, 2009 edition',
+# #  'tags': ('diveintopython', 'docbook', 'html'),
+# #  'article_link':
+# #  'http://diveintomark.org/archives/2009/03/27/dive-into-history-2009-edition',
+# #  'published': True}
+# print(entry)
+import bz2
+if __name__ == '__main__':
+    un = b'BZh91AY&SYA\xaf\x82\r\x00\x00\x01\x01\x80\x02\xc0\x02\x00 \x00!\x9ah3M\x07<]\xc9\x14\xe1BA\x06\xbe\x084'  
+    pw = b'BZh91AY&SY\x94$|\x0e\x00\x00\x00\x81\x00\x03$ \x00!\x9ah3M\x13<]\xc9\x14\xe1BBP\x91\xf08' 
+    print(bz2.decompress(un))
+    print(bz2.decompress(pw))#需要这里的pw un 参数是byte型
 

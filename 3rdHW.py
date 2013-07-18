@@ -1,12 +1,2 @@
-import pickle
-with open('entry.pickle', 'rb') as f:  
-    entry = pickle.load(f)              
-entry                                   
-# {'comments_link': None,
-#  'internal_id': b'\xDE\xD5\xB4\xF8',
-#  'title': 'Dive into history, 2009 edition',
-#  'tags': ('diveintopython', 'docbook', 'html'),
-#  'article_link':
-#  'http://diveintomark.org/archives/2009/03/27/dive-into-history-2009-edition',
-#  'published': True}
-print(entry)
+x94$|\x0e\x00\x00\x00\x81\x00\x03$ \x00!\x9ah3M\x13<]\xc9\x14\xe1BBP\x91\xf08
+xaf\x82\r\x00\x00\x01\x01\x80\x02\xc0\x02\x00 \x00!\x9ah3M\x07<]\xc9\x14\xe1BA\x06\xbe\x084
