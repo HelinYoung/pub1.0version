@@ -1,3 +1,26 @@
+from PIL import Image
+from PIL import ImageDraw
+image = Image.open("cave.jpg")
+nsize = tuple([int(x / 2) for x in image.size])
+odd = even = Image.new(image.mode, nsize)
+
+for x in range(image.size[0]):
+    for y in range(image.size[1]):
+        if x % 2 == 0 and y % 2 == 0:
+            even.putpixel((int(x / 2), int(y / 2)), image.getpixel((x, y)))
+        elif x % 2 == 0 and y % 2 == 1:
+            odd.putpixel((int(x / 2),int( (y - 1) / 2)), image.getpixel((x, y)))
+        elif x % 2 == 1 and y % 2 == 0:
+            even.putpixel((int((x - 1) / 2),int( y / 2) ), image.getpixel((x, y)))
+        else:
+            odd.putpixel((int((x - 1) / 2),int ((y - 1) / 2)), image.getpixel((x, y)))
+
+even.save("even.jpg")
+odd.save("odd.jpg")
+even.show()
+odd.show()
+
+
 #import string#http://www.pythonchallenge.com/pc/def/peak.html
 # x=["m","q","g"]
 # y="g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr ylb rfyr'q ufw rfgq rcvr gq qm jmle. sqgle qrpgle.kyicrpylq() gq pcamkkclbcb. lmu ynnjw ml rfc spj.map"
@@ -158,47 +181,47 @@
 
 # decompressed = bz2.decompress(compressed)
 # print （'Decompressed :', len(decompressed), decompressed）
-import re  
+# import re  
   
-if __name__ == '__main__':  
-    counter = 0  
+# if __name__ == '__main__':  
+#     counter = 0  
 
-    def fun(s):  
+#     def fun(s):  
 
-        result = '' 
-        char = s[0]  
-        count = 0    
+#         result = '' 
+#         char = s[0]  
+#         count = 0    
 
-        for x in s:  
-            if x == char:  
-                count += 1  
-            else:  
-                result += str(count) + char  
-                count = 1  
-                char = x  
+#         for x in s:  
+#             if x == char:  
+#                 count += 1  
+#             else:  
+#                 result += str(count) + char  
+#                 count = 1  
+#                 char = x  
                   
-        result += str(count) + char  
+#         result += str(count) + char  
           
-        print(len(result))  
+#         print(len(result))  
           
-        global counter  
+#         global counter  
 
-        counter += 1  
+#         counter += 1  
           
-        if counter < 30:  
-            fun(result)  
+#         if counter < 30:  
+#             fun(result)  
                   
-    fun('1')  
+#     fun('1')  
 
-    #solution 2 Start  
-    def describe(s):  
-        sets = re.findall("(1+|2+|3+)", s)  
+#     #solution 2 Start  
+#     def describe(s):  
+#         sets = re.findall("(1+|2+|3+)", s)  
 
-        return ''.join(str(len(x)) + x[0] for x in sets)
+#         return ''.join(str(len(x)) + x[0] for x in sets)
 
-    s = '1'  
+#     s = '1'  
       
-    for dummy in range(30):  
-        s = describe(s)  
+#     for dummy in range(30):  
+#         s = describe(s)  
           
-    print(len(s)) 
+#     print(len(s)) 
