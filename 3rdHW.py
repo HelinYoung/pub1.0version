@@ -1,2 +1,12 @@
-x94$|\x0e\x00\x00\x00\x81\x00\x03$ \x00!\x9ah3M\x13<]\xc9\x14\xe1BBP\x91\xf08
-xaf\x82\r\x00\x00\x01\x01\x80\x02\xc0\x02\x00 \x00!\x9ah3M\x07<]\xc9\x14\xe1BA\x06\xbe\x084
+import os,time,string
+c1='cd Desktop/Git','git init','git add -A','git commit -m \'%s\'' % time.strftime('%Y-%m-%d-%H:%M:%S',time.localtime(time.time())),
+'git pull origin master','git push origin'
+
+print(len(c1))
+i=0
+while i <len(c1):
+    print(c1[i])
+    if os.system(c1[i])!=0 :  
+        pass
+    #     print (' ---- 执行命令失败 [%s]----' % c1[i] )
+    i+=1
