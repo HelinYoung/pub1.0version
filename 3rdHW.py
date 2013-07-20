@@ -1,5 +1,5 @@
 import os,time,string
-c1='cd Desktop/Git','git init','git add -A','git commit -m \'%s\'' % time.strftime('%Y-%m-%d-%H:%M:%S',time.localtime(time.time())),'git pull origin master','git push master origin'
+c1='cd Desktop/Git','git init','git add -A','git commit -m \'%s\'' % time.strftime('%Y-%m-%d-%H:%M:%S',time.localtime(time.time())),'git pull origin master','git push origin master'
 
 print(len(c1))
 i=0
