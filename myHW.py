@@ -142,51 +142,63 @@
 # draw.line(second)
 # img.show()
 
-import time
-print(time.time())
-print(time.localtime(time.time()))
-print(time.strftime('%Y-%m-%d-%H:%M:%S',time.localtime(time.time())))
-# import re  
+# import time
+# print(time.time())
+# print(time.localtime(time.time()))
+# print(time.strftime('%Y-%m-%d-%H:%M:%S',time.localtime(time.time())))
+
+# import bz2
+# import binascii
+
+# original_data = 'This is the original text.'
+# print （'Original     :', len(original_data), original_data）
+
+# compressed = bz2.compress(original_data)
+# print （'Compressed   :', len(compressed), binascii.hexlify(compressed)）
+
+# decompressed = bz2.decompress(compressed)
+# print （'Decompressed :', len(decompressed), decompressed）
+import re  
   
-# if __name__ == '__main__':  
-#     counter = 0  
+if __name__ == '__main__':  
+    counter = 0  
 
-#     def fun(s):  
+    def fun(s):  
 
-#         result = '' 
-#         char = s[0]  
-#         count = 0    
+        result = '' 
+        char = s[0]  
+        count = 0    
 
-#         for x in s:  
-#             if x == char:  
-#                 count += 1  
-#             else:  
-#                 result += str(count) + char  
-#                 count = 1  
-#                 char = x  
+        for x in s:  
+            if x == char:  
+                count += 1  
+            else:  
+                result += str(count) + char  
+                count = 1  
+                char = x  
                   
-#         result += str(count) + char  
+        result += str(count) + char  
           
-#         print(len(result))  
+        print(len(result))  
           
-#         global counter  
+        global counter  
 
-#         counter += 1  
+        counter += 1  
           
-#         if counter < 30:  
-#             fun(result)  
+        if counter < 30:  
+            fun(result)  
                   
-#     fun('1')  
+    fun('1')  
 
-#     #solution 2 Start  
-#     def describe(s):  
-#         sets = re.findall("(1+|2+|3+)", s)  
+    #solution 2 Start  
+    def describe(s):  
+        sets = re.findall("(1+|2+|3+)", s)  
 
-#         return ''.join(str(len(x)) + x[0] for x in sets)
+        return ''.join(str(len(x)) + x[0] for x in sets)
 
-#     s = '1'  
+    s = '1'  
       
-#     for dummy in range(30):  
-#         s = describe(s)  
+    for dummy in range(30):  
+        s = describe(s)  
           
-#     print(len(s)) 
+    print(len(s)) 
