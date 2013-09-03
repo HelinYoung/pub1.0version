@@ -20,7 +20,6 @@ odd.save("odd.jpg")
 even.show()
 odd.show()
 
-
 #import string#http://www.pythonchallenge.com/pc/def/peak.html
 # x=["m","q","g"]
 # y="g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr ylb rfyr'q ufw rfgq rcvr gq qm jmle. sqgle qrpgle.kyicrpylq() gq pcamkkclbcb. lmu ynnjw ml rfc spj.map"
@@ -57,8 +56,8 @@ odd.show()
 #         fp =urllib.request.urlopen(uri % nothing)
 #         bsource=fp.read()
 #         print(bsource)#the source is read as HTML bytes
-#         strsource=bsource.decode("utf8")   
-#         print(strsource) 
+#         strsource=bsource.decode("utf8")
+#         print(strsource)
 #         nothing = nothing_rep.search (strsource).group(1)
 #         print (nothing)
 #     except :
@@ -81,7 +80,7 @@ odd.show()
 # while True:
 #     try:
 #         btemp=file.read(f % n)
-#         strtemp=btemp.decode("utf8")  
+#         strtemp=btemp.decode("utf8")
 #         n = nnr.search(strtemp).group(1)
 #     except:
 #         print (file.read(f % n))
@@ -98,7 +97,7 @@ odd.show()
 # print ("".join(map(chr, map(int, re.findall("\d+", "".join(map(chr, ords)))))))
 # import time
 # import pickle
-# entry = {}          
+# entry = {}
 # entry['title'] = 'Dive into history, 2009 edition'
 # entry['article_link'] = 'http://diveintomark.org/archives/2009/03/27/dive-into-history-2009-edition'
 # entry['comments_link'] = None
@@ -106,15 +105,15 @@ odd.show()
 # entry['tags'] = ('diveintopython', 'docbook', 'html')
 # entry['published'] = True
 
-# entry['published_date'] = time.strptime('Fri Mar 27 22:20:42 2009') 
+# entry['published_date'] = time.strptime('Fri Mar 27 22:20:42 2009')
 
 
 # with open('entry.pickle','wb') as f:
 #     pickle.dump(entry,f)
 # import pickle
-# with open('entry.pickle', 'rb') as f:  
-#     entry = pickle.load(f)              
-# entry                                   
+# with open('entry.pickle', 'rb') as f:
+#     entry = pickle.load(f)
+# entry
 # # {'comments_link': None,
 # #  'internal_id': b'\xDE\xD5\xB4\xF8',
 # #  'title': 'Dive into history, 2009 edition',
@@ -125,8 +124,8 @@ odd.show()
 # print(entry)
 # import bz2
 # if __name__ == '__main__':
-#     un = b'BZh91AY&SYA\xaf\x82\r\x00\x00\x01\x01\x80\x02\xc0\x02\x00 \x00!\x9ah3M\x07<]\xc9\x14\xe1BA\x06\xbe\x084'  
-#     pw = b'BZh91AY&SY\x94$|\x0e\x00\x00\x00\x81\x00\x03$ \x00!\x9ah3M\x13<]\xc9\x14\xe1BBP\x91\xf08' 
+#     un = b'BZh91AY&SYA\xaf\x82\r\x00\x00\x01\x01\x80\x02\xc0\x02\x00 \x00!\x9ah3M\x07<]\xc9\x14\xe1BA\x06\xbe\x084'
+#     pw = b'BZh91AY&SY\x94$|\x0e\x00\x00\x00\x81\x00\x03$ \x00!\x9ah3M\x13<]\xc9\x14\xe1BBP\x91\xf08'
 #     print(bz2.decompress(un))
 #     print(bz2.decompress(pw))#需要这里的pw un 参数是byte型
 
@@ -181,47 +180,47 @@ odd.show()
 
 # decompressed = bz2.decompress(compressed)
 # print （'Decompressed :', len(decompressed), decompressed）
-# import re  
-  
-# if __name__ == '__main__':  
-#     counter = 0  
+# import re
 
-#     def fun(s):  
+# if __name__ == '__main__':
+#     counter = 0
 
-#         result = '' 
-#         char = s[0]  
-#         count = 0    
+#     def fun(s):
 
-#         for x in s:  
-#             if x == char:  
-#                 count += 1  
-#             else:  
-#                 result += str(count) + char  
-#                 count = 1  
-#                 char = x  
-                  
-#         result += str(count) + char  
-          
-#         print(len(result))  
-          
-#         global counter  
+#         result = ''
+#         char = s[0]
+#         count = 0
 
-#         counter += 1  
-          
-#         if counter < 30:  
-#             fun(result)  
-                  
-#     fun('1')  
+#         for x in s:
+#             if x == char:
+#                 count += 1
+#             else:
+#                 result += str(count) + char
+#                 count = 1
+#                 char = x
 
-#     #solution 2 Start  
-#     def describe(s):  
-#         sets = re.findall("(1+|2+|3+)", s)  
+#         result += str(count) + char
+
+#         print(len(result))
+
+#         global counter
+
+#         counter += 1
+
+#         if counter < 30:
+#             fun(result)
+
+#     fun('1')
+
+#     #solution 2 Start
+#     def describe(s):
+#         sets = re.findall("(1+|2+|3+)", s)
 
 #         return ''.join(str(len(x)) + x[0] for x in sets)
 
-#     s = '1'  
-      
-#     for dummy in range(30):  
-#         s = describe(s)  
-          
-#     print(len(s)) 
+#     s = '1'
+
+#     for dummy in range(30):
+#         s = describe(s)
+
+#     print(len(s))
